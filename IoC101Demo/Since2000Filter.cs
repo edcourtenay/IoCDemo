@@ -1,10 +1,12 @@
+using System;
+
 namespace IoC101Demo
 {
     internal class Since2000Filter : IFilmFilter
     {
-        public bool Filter(IFilm film)
+        public Func<IFilm, bool> FilterFunction
         {
-            return film.Year >= 2000;
+            get { return film => film.Year >= 2000; }
         }
     }
 }

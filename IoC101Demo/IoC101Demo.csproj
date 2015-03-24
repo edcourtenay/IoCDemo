@@ -44,9 +44,11 @@
   <ItemGroup>
     <Compile Include="Film.cs" />
     <Compile Include="FilmRepository.cs" />
+    <Compile Include="FilmSortStrategy.cs" />
     <Compile Include="IFilm.cs" />
     <Compile Include="IFilmFilter.cs" />
     <Compile Include="IFilmRepository.cs" />
+    <Compile Include="IFilmSortStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleApp.cs" />

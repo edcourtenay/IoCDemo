@@ -5,13 +5,16 @@ namespace IoC101Demo
 {
     internal class SimpleApp
     {
+        
         public void Run()
         {
             var repository = new FilmRepository();
             var filter = new Since2000Filter();
+            var filmSortStrategy = new FilmSortStrategy();
 
             var filteredFilms = repository.Films()
-                .Where(film => filter.Filter(film))
+                .Where(filter.FilterFunction)
+                .OrderBy(filmSortStrategy.OrderFunction)
                 .ToArray();
 
             foreach (var filteredFilm in filteredFilms)
