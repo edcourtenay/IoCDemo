@@ -2,7 +2,7 @@ using System;
 
 namespace IoC101Demo
 {
-    internal interface IFilmFilter
+    public interface IFilmFilter
     {
         Func<IFilm, bool> FilterFunction { get; }
     }

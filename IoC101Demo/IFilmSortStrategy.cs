@@ -2,7 +2,7 @@
 
 namespace IoC101Demo
 {
-    internal interface IFilmSortStrategy
+    public interface IFilmSortStrategy
     {
         Func<IFilm, int> OrderFunction { get; }
     }
