@@ -2,7 +2,7 @@ using System;
 
 namespace IoC101Demo
 {
-    public class Film : IFilm
+    public class Film
     {
         public string Name { get; set; }
         public int Year { get; set; }

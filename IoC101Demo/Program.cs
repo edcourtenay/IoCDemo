@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
-using System.Dynamic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Linq;
+using IoC101Demo.Filters;
+using IoC101Demo.Sorting;
 
 namespace IoC101Demo
 {
@@ -9,14 +9,20 @@ namespace IoC101Demo
     {
         static void Main(string[] args)
         {
-            var container = new Container();
+            var repository = new FilmRepository();
+            var filter = new Since2000Filter();
+            var filmSortStrategy = new YearSort();
 
-            container.Register<IFilmRepository, FilmRepository>();
-            container.Register<IFilmFilter, Since2000Filter>();
-            container.Register<IFilmSortStrategy, FilmSortStrategy>();
-            
-            SimpleApp simpleApp = container.Resolve<SimpleApp>();
-            simpleApp.Run();
+            var filteredFilms = repository.Films()
+                .Where(filter.FilterFunction)
+                .OrderBy(film => film, filmSortStrategy)
+                .ToArray();
+
+            foreach (var filteredFilm in filteredFilms)
+            {
+                Console.WriteLine(filteredFilm);
+            }
+
         }
     }
 }

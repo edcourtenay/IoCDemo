@@ -1,9 +1,8 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace IoC101Demo
 {
-    public interface IFilmSortStrategy
+    public interface IFilmSortStrategy : IComparer<Film>
     {
-        Func<IFilm, int> OrderFunction { get; }
     }
 }

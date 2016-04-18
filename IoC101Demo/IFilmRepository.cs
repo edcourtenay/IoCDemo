@@ -4,6 +4,6 @@ namespace IoC101Demo
 {
     public interface IFilmRepository
     {
-        IEnumerable<IFilm> Films();
+        IEnumerable<Film> Films();
     }
 }

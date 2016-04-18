@@ -1,12 +1,10 @@
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Threading;
+ï»¿using System.Collections.Generic;
 
 namespace IoC101Demo
 {
     public class FilmRepository : IFilmRepository
     {
-        public IEnumerable<IFilm> Films()
+        public IEnumerable<Film> Films()
         {
             yield return new Film { Name = "The Shawshank Redemption", Year = 1994, Director = new[] { "Frank Darabont" }, Actor = new[] { "Tim Robbins", "Morgan Freeman" } };
             yield return new Film { Name = "The Godfather", Year = 1972, Director = new[] { "Francis Ford Coppola" }, Actor = new[] { "Marlon Brando", "Al Pacino" } };
@@ -26,7 +24,7 @@ namespace IoC101Demo
             yield return new Film { Name = "One Flew Over the Cuckoo's Nest", Year = 1975, Director = new[] { "Milos Forman" }, Actor = new[] { "Jack Nicholson", "Louise Fletcher" } };
             yield return new Film { Name = "Goodfellas", Year = 1990, Director = new[] { "Martin Scorsese" }, Actor = new[] { "Robert De Niro", "Ray Liotta" } };
             yield return new Film { Name = "The Matrix", Year = 1999, Director = new[] { "Andy Wachowski", "Lena Wachowski" }, Actor = new[] { "Keanu Reeves", "Laurence Fishburne" } };
-            yield return new Film { Name = "Seven Samurai", Year = 1954, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "Toshirô Mifune", "Takashi Shimura" } };
+            yield return new Film { Name = "Seven Samurai", Year = 1954, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "ToshirÃ´ Mifune", "Takashi Shimura" } };
             yield return new Film { Name = "Star Wars: Episode IV - A New Hope", Year = 1977, Director = new[] { "George Lucas" }, Actor = new[] { "Mark Hamill", "Harrison Ford" } };
             yield return new Film { Name = "City of God", Year = 2002, Director = new[] { "Fernando Meirelles" }, Actor = new[] { "Alexandre Rodrigues", "Matheus Nachtergaele" } };
             yield return new Film { Name = "Se7en", Year = 1995, Director = new[] { "David Fincher" }, Actor = new[] { "Morgan Freeman", "Brad Pitt" } };
@@ -34,7 +32,7 @@ namespace IoC101Demo
             yield return new Film { Name = "It's a Wonderful Life", Year = 1946, Director = new[] { "Frank Capra" }, Actor = new[] { "James Stewart", "Donna Reed" } };
             yield return new Film { Name = "The Usual Suspects", Year = 1995, Director = new[] { "Bryan Singer" }, Actor = new[] { "Kevin Spacey", "Gabriel Byrne" } };
             yield return new Film { Name = "Life Is Beautiful", Year = 1997, Director = new[] { "Roberto Benigni" }, Actor = new[] { "Roberto Benigni", "Nicoletta Braschi" } };
-            yield return new Film { Name = "Léon", Year = 1994, Director = new[] { "Luc Besson" }, Actor = new[] { "Jean Reno", "Gary Oldman" } };
+            yield return new Film { Name = "LÃ©on", Year = 1994, Director = new[] { "Luc Besson" }, Actor = new[] { "Jean Reno", "Gary Oldman" } };
             yield return new Film { Name = "Once Upon a Time in the West", Year = 1968, Director = new[] { "Sergio Leone" }, Actor = new[] { "Henry Fonda", "Charles Bronson" } };
             yield return new Film { Name = "Spirited Away", Year = 2001, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "Daveigh Chase", "Suzanne Pleshette" } };
             yield return new Film { Name = "Saving Private Ryan", Year = 1998, Director = new[] { "Steven Spielberg" }, Actor = new[] { "Tom Hanks", "Matt Damon" } };
@@ -45,7 +43,7 @@ namespace IoC101Demo
             yield return new Film { Name = "Psycho", Year = 1960, Director = new[] { "Alfred Hitchcock" }, Actor = new[] { "Anthony Perkins", "Janet Leigh" } };
             yield return new Film { Name = "Raiders of the Lost Ark", Year = 1981, Director = new[] { "Steven Spielberg" }, Actor = new[] { "Harrison Ford", "Karen Allen" } };
             yield return new Film { Name = "Rear Window", Year = 1954, Director = new[] { "Alfred Hitchcock" }, Actor = new[] { "James Stewart", "Grace Kelly" } };
-            yield return new Film { Name = "Untouchable", Year = 2011, Director = new[] { "Olivier Nakache" }, Actor = new[] { "François Cluzet", "Omar Sy" } };
+            yield return new Film { Name = "Untouchable", Year = 2011, Director = new[] { "Olivier Nakache" }, Actor = new[] { "FranÃ§ois Cluzet", "Omar Sy" } };
             yield return new Film { Name = "Modern Times", Year = 1936, Director = new[] { "Charles Chaplin" }, Actor = new[] { "Charles Chaplin", "Paulette Goddard" } };
             yield return new Film { Name = "The Green Mile", Year = 1999, Director = new[] { "Frank Darabont" }, Actor = new[] { "Tom Hanks", "Michael Clarke Duncan" } };
             yield return new Film { Name = "Terminator 2: Judgment Day", Year = 1991, Director = new[] { "James Cameron" }, Actor = new[] { "Arnold Schwarzenegger", "Linda Hamilton" } };
@@ -62,28 +60,28 @@ namespace IoC101Demo
             yield return new Film { Name = "The Lion King", Year = 1994, Director = new[] { "Roger Allers" }, Actor = new[] { "Matthew Broderick", "Jeremy Irons" } };
             yield return new Film { Name = "Alien", Year = 1979, Director = new[] { "Ridley Scott" }, Actor = new[] { "Sigourney Weaver", "Tom Skerritt" } };
             yield return new Film { Name = "The Great Dictator", Year = 1940, Director = new[] { "Charles Chaplin" }, Actor = new[] { "Charles Chaplin", "Paulette Goddard" } };
-            yield return new Film { Name = "The Lives of Others", Year = 2006, Director = new[] { "Florian Henckel von Donnersmarck" }, Actor = new[] { "Ulrich Mühe", "Martina Gedeck" } };
+            yield return new Film { Name = "The Lives of Others", Year = 2006, Director = new[] { "Florian Henckel von Donnersmarck" }, Actor = new[] { "Ulrich MÃ¼he", "Martina Gedeck" } };
             yield return new Film { Name = "Cinema Paradiso", Year = 1988, Director = new[] { "Giuseppe Tornatore" }, Actor = new[] { "Philippe Noiret", "Enzo Cannavale" } };
             yield return new Film { Name = "Django Unchained", Year = 2012, Director = new[] { "Quentin Tarantino" }, Actor = new[] { "Jamie Foxx", "Christoph Waltz" } };
             yield return new Film { Name = "The Shining", Year = 1980, Director = new[] { "Stanley Kubrick" }, Actor = new[] { "Jack Nicholson", "Shelley Duvall" } };
             yield return new Film { Name = "Paths of Glory", Year = 1957, Director = new[] { "Stanley Kubrick" }, Actor = new[] { "Kirk Douglas", "Ralph Meeker" } };
             yield return new Film { Name = "The Dark Knight Rises", Year = 2012, Director = new[] { "Christopher Nolan" }, Actor = new[] { "Christian Bale", "Tom Hardy" } };
             yield return new Film { Name = "Grave of the Fireflies", Year = 1988, Director = new[] { "Isao Takahata" }, Actor = new[] { "Tsutomu Tatsumi", "Ayano Shiraishi" } };
-            yield return new Film { Name = "WALL·E", Year = 2008, Director = new[] { "Andrew Stanton" }, Actor = new[] { "Ben Burtt", "Elissa Knight" } };
+            yield return new Film { Name = "WALLÂ·E", Year = 2008, Director = new[] { "Andrew Stanton" }, Actor = new[] { "Ben Burtt", "Elissa Knight" } };
             yield return new Film { Name = "American Beauty", Year = 1999, Director = new[] { "Sam Mendes" }, Actor = new[] { "Kevin Spacey", "Annette Bening" } };
             yield return new Film { Name = "Aliens", Year = 1986, Director = new[] { "James Cameron" }, Actor = new[] { "Sigourney Weaver", "Michael Biehn" } };
-            yield return new Film { Name = "Princess Mononoke", Year = 1997, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "Yôji Matsuda", "Yuriko Ishida" } };
+            yield return new Film { Name = "Princess Mononoke", Year = 1997, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "YÃ´ji Matsuda", "Yuriko Ishida" } };
             yield return new Film { Name = "Oldboy", Year = 2003, Director = new[] { "Chan-wook Park" }, Actor = new[] { "Min-sik Choi", "Ji-tae Yu" } };
             yield return new Film { Name = "Citizen Kane", Year = 1941, Director = new[] { "Orson Welles" }, Actor = new[] { "Orson Welles", "Joseph Cotten" } };
             yield return new Film { Name = "North by Northwest", Year = 1959, Director = new[] { "Alfred Hitchcock" }, Actor = new[] { "Cary Grant", "Eva Marie Saint" } };
             yield return new Film { Name = "Once Upon a Time in America", Year = 1984, Director = new[] { "Sergio Leone" }, Actor = new[] { "Robert De Niro", "James Woods" } };
             yield return new Film { Name = "Vertigo", Year = 1958, Director = new[] { "Alfred Hitchcock" }, Actor = new[] { "James Stewart", "Kim Novak" } };
-            yield return new Film { Name = "Das Boot", Year = 1981, Director = new[] { "Wolfgang Petersen" }, Actor = new[] { "Jürgen Prochnow", "Herbert Grönemeyer" } };
+            yield return new Film { Name = "Das Boot", Year = 1981, Director = new[] { "Wolfgang Petersen" }, Actor = new[] { "JÃ¼rgen Prochnow", "Herbert GrÃ¶nemeyer" } };
             yield return new Film { Name = "Deadpool", Year = 2016, Director = new[] { "Tim Miller" }, Actor = new[] { "Ryan Reynolds", "Morena Baccarin" } };
             yield return new Film { Name = "Star Wars: Episode VI - Return of the Jedi", Year = 1983, Director = new[] { "Richard Marquand" }, Actor = new[] { "Mark Hamill", "Harrison Ford" } };
             yield return new Film { Name = "M", Year = 1931, Director = new[] { "Fritz Lang" }, Actor = new[] { "Peter Lorre", "Ellen Widmann" } };
             yield return new Film { Name = "Witness for the Prosecution", Year = 1957, Director = new[] { "Billy Wilder" }, Actor = new[] { "Tyrone Power", "Marlene Dietrich" } };
-            yield return new Film { Name = "Amélie", Year = 2001, Director = new[] { "Jean-Pierre Jeunet" }, Actor = new[] { "Audrey Tautou", "Mathieu Kassovitz" } };
+            yield return new Film { Name = "AmÃ©lie", Year = 2001, Director = new[] { "Jean-Pierre Jeunet" }, Actor = new[] { "Audrey Tautou", "Mathieu Kassovitz" } };
             yield return new Film { Name = "Reservoir Dogs", Year = 1992, Director = new[] { "Quentin Tarantino" }, Actor = new[] { "Harvey Keitel", "Tim Roth" } };
             yield return new Film { Name = "Braveheart", Year = 1995, Director = new[] { "Mel Gibson" }, Actor = new[] { "Mel Gibson", "Sophie Marceau" } };
             yield return new Film { Name = "Requiem for a Dream", Year = 2000, Director = new[] { "Darren Aronofsky" }, Actor = new[] { "Ellen Burstyn", "Jared Leto" } };
@@ -107,7 +105,7 @@ namespace IoC101Demo
             yield return new Film { Name = "The Kid", Year = 1921, Director = new[] { "Charles Chaplin" }, Actor = new[] { "Charles Chaplin", "Edna Purviance" } };
             yield return new Film { Name = "Inglourious Basterds", Year = 2009, Director = new[] { "Quentin Tarantino" }, Actor = new[] { "Brad Pitt", "Diane Kruger" } };
             yield return new Film { Name = "L.A. Confidential", Year = 1997, Director = new[] { "Curtis Hanson" }, Actor = new[] { "Kevin Spacey", "Russell Crowe" } };
-            yield return new Film { Name = "Rashomon", Year = 1950, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "Toshirô Mifune", "Machiko Kyô" } };
+            yield return new Film { Name = "Rashomon", Year = 1950, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "ToshirÃ´ Mifune", "Machiko KyÃ´" } };
             yield return new Film { Name = "For a Few Dollars More", Year = 1965, Director = new[] { "Sergio Leone" }, Actor = new[] { "Clint Eastwood", "Lee Van Cleef" } };
             yield return new Film { Name = "The Apartment", Year = 1960, Director = new[] { "Billy Wilder" }, Actor = new[] { "Jack Lemmon", "Shirley MacLaine" } };
             yield return new Film { Name = "Indiana Jones and the Last Crusade", Year = 1989, Director = new[] { "Steven Spielberg" }, Actor = new[] { "Harrison Ford", "Sean Connery" } };
@@ -116,7 +114,7 @@ namespace IoC101Demo
             yield return new Film { Name = "Scarface", Year = 1983, Director = new[] { "Brian De Palma" }, Actor = new[] { "Al Pacino", "Michelle Pfeiffer" } };
             yield return new Film { Name = "Metropolis", Year = 1927, Director = new[] { "Fritz Lang" }, Actor = new[] { "Brigitte Helm", "Alfred Abel" } };
             yield return new Film { Name = "The Treasure of the Sierra Madre", Year = 1948, Director = new[] { "John Huston" }, Actor = new[] { "Humphrey Bogart", "Walter Huston" } };
-            yield return new Film { Name = "Yojimbo", Year = 1961, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "Toshirô Mifune", "Eijirô Tôno" } };
+            yield return new Film { Name = "Yojimbo", Year = 1961, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "ToshirÃ´ Mifune", "EijirÃ´ TÃ´no" } };
             yield return new Film { Name = "Inside Out", Year = 2015, Director = new[] { "Pete Docter" }, Actor = new[] { "Amy Poehler", "Bill Hader" } };
             yield return new Film { Name = "Batman Begins", Year = 2005, Director = new[] { "Christopher Nolan" }, Actor = new[] { "Christian Bale", "Michael Caine" } };
             yield return new Film { Name = "Some Like It Hot", Year = 1959, Director = new[] { "Billy Wilder" }, Actor = new[] { "Marilyn Monroe", "Tony Curtis" } };
@@ -142,13 +140,13 @@ namespace IoC101Demo
             yield return new Film { Name = "The Bridge on the River Kwai", Year = 1957, Director = new[] { "David Lean" }, Actor = new[] { "William Holden", "Alec Guinness" } };
             yield return new Film { Name = "The Gold Rush", Year = 1925, Director = new[] { "Charles Chaplin" }, Actor = new[] { "Charles Chaplin", "Mack Swain" } };
             yield return new Film { Name = "Ran", Year = 1985, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "Tatsuya Nakadai", "Akira Terao" } };
-            yield return new Film { Name = "The Seventh Seal", Year = 1957, Director = new[] { "Ingmar Bergman" }, Actor = new[] { "Max von Sydow", "Gunnar Björnstrand" } };
-            yield return new Film { Name = "The Secret in Their Eyes", Year = 2009, Director = new[] { "Juan José Campanella" }, Actor = new[] { "Ricardo Darín", "Soledad Villamil" } };
+            yield return new Film { Name = "The Seventh Seal", Year = 1957, Director = new[] { "Ingmar Bergman" }, Actor = new[] { "Max von Sydow", "Gunnar BjÃ¶rnstrand" } };
+            yield return new Film { Name = "The Secret in Their Eyes", Year = 2009, Director = new[] { "Juan JosÃ© Campanella" }, Actor = new[] { "Ricardo DarÃ­n", "Soledad Villamil" } };
             yield return new Film { Name = "Blade Runner", Year = 1982, Director = new[] { "Ridley Scott" }, Actor = new[] { "Harrison Ford", "Rutger Hauer" } };
             yield return new Film { Name = "Lock, Stock and Two Smoking Barrels", Year = 1998, Director = new[] { "Guy Ritchie" }, Actor = new[] { "Jason Flemyng", "Dexter Fletcher" } };
             yield return new Film { Name = "The General", Year = 1926, Director = new[] { "Clyde Bruckman" }, Actor = new[] { "Buster Keaton", "Marion Mack" } };
-            yield return new Film { Name = "Wild Strawberries", Year = 1957, Director = new[] { "Ingmar Bergman" }, Actor = new[] { "Victor Sjöström", "Bibi Andersson" } };
-            yield return new Film { Name = "Howl's Moving Castle", Year = 2004, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "Chieko Baishô", "Takuya Kimura" } };
+            yield return new Film { Name = "Wild Strawberries", Year = 1957, Director = new[] { "Ingmar Bergman" }, Actor = new[] { "Victor SjÃ¶strÃ¶m", "Bibi Andersson" } };
+            yield return new Film { Name = "Howl's Moving Castle", Year = 2004, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "Chieko BaishÃ´", "Takuya Kimura" } };
             yield return new Film { Name = "Casino", Year = 1995, Director = new[] { "Martin Scorsese" }, Actor = new[] { "Robert De Niro", "Sharon Stone" } };
             yield return new Film { Name = "The Elephant Man", Year = 1980, Director = new[] { "David Lynch" }, Actor = new[] { "Anthony Hopkins", "John Hurt" } };
             yield return new Film { Name = "Warrior", Year = 2011, Director = new[] { "Gavin O'Connor" }, Actor = new[] { "Tom Hardy", "Nick Nolte" } };
@@ -159,9 +157,9 @@ namespace IoC101Demo
             yield return new Film { Name = "Gran Torino", Year = 2008, Director = new[] { "Clint Eastwood" }, Actor = new[] { "Clint Eastwood", "Bee Vang" } };
             yield return new Film { Name = "The Big Lebowski", Year = 1998, Director = new[] { "Joel Coen", "Ethan Coen" }, Actor = new[] { "Jeff Bridges", "John Goodman" } };
             yield return new Film { Name = "Rebecca", Year = 1940, Director = new[] { "Alfred Hitchcock" }, Actor = new[] { "Laurence Olivier", "Joan Fontaine" } };
-            yield return new Film { Name = "The Revenant", Year = 2015, Director = new[] { "Alejandro González Iñárritu" }, Actor = new[] { "Leonardo DiCaprio", "Tom Hardy" } };
+            yield return new Film { Name = "The Revenant", Year = 2015, Director = new[] { "Alejandro GonzÃ¡lez IÃ±Ã¡rritu" }, Actor = new[] { "Leonardo DiCaprio", "Tom Hardy" } };
             yield return new Film { Name = "The Deer Hunter", Year = 1978, Director = new[] { "Michael Cimino" }, Actor = new[] { "Robert De Niro", "Christopher Walken" } };
-            yield return new Film { Name = "Incendies", Year = 2010, Director = new[] { "Denis Villeneuve" }, Actor = new[] { "Lubna Azabal", "Mélissa Désormeaux-Poulin" } };
+            yield return new Film { Name = "Incendies", Year = 2010, Director = new[] { "Denis Villeneuve" }, Actor = new[] { "Lubna Azabal", "MÃ©lissa DÃ©sormeaux-Poulin" } };
             yield return new Film { Name = "Cool Hand Luke", Year = 1967, Director = new[] { "Stuart Rosenberg" }, Actor = new[] { "Paul Newman", "George Kennedy" } };
             yield return new Film { Name = "Gone with the Wind", Year = 1939, Director = new[] { "Victor Fleming" }, Actor = new[] { "Clark Gable", "Vivien Leigh" } };
             yield return new Film { Name = "Fargo", Year = 1996, Director = new[] { "Joel Coen", "Ethan Coen" }, Actor = new[] { "William H. Macy", "Frances McDormand" } };
@@ -179,7 +177,7 @@ namespace IoC101Demo
             yield return new Film { Name = "Gone Girl", Year = 2014, Director = new[] { "David Fincher" }, Actor = new[] { "Ben Affleck", "Rosamund Pike" } };
             yield return new Film { Name = "Kill Bill: Vol. 1", Year = 2003, Director = new[] { "Quentin Tarantino" }, Actor = new[] { "Uma Thurman", "David Carradine" } };
             yield return new Film { Name = "Mad Max: Fury Road", Year = 2015, Director = new[] { "George Miller" }, Actor = new[] { "Tom Hardy", "Charlize Theron" } };
-            yield return new Film { Name = "Rush", Year = 2013, Director = new[] { "Ron Howard" }, Actor = new[] { "Daniel Brühl", "Chris Hemsworth" } };
+            yield return new Film { Name = "Rush", Year = 2013, Director = new[] { "Ron Howard" }, Actor = new[] { "Daniel BrÃ¼hl", "Chris Hemsworth" } };
             yield return new Film { Name = "The Maltese Falcon", Year = 1941, Director = new[] { "John Huston" }, Actor = new[] { "Humphrey Bogart", "Mary Astor" } };
             yield return new Film { Name = "Life of Brian", Year = 1979, Director = new[] { "Terry Jones" }, Actor = new[] { "Graham Chapman", "John Cleese" } };
             yield return new Film { Name = "Hotel Rwanda", Year = 2004, Director = new[] { "Terry George" }, Actor = new[] { "Don Cheadle", "Sophie Okonedo" } };
@@ -188,7 +186,7 @@ namespace IoC101Demo
             yield return new Film { Name = "The Wages of Fear", Year = 1953, Director = new[] { "Henri-Georges Clouzot" }, Actor = new[] { "Yves Montand", "Charles Vanel" } };
             yield return new Film { Name = "Network", Year = 1976, Director = new[] { "Sidney Lumet" }, Actor = new[] { "Faye Dunaway", "William Holden" } };
             yield return new Film { Name = "Butch Cassidy and the Sundance Kid", Year = 1969, Director = new[] { "George Roy Hill" }, Actor = new[] { "Paul Newman", "Robert Redford" } };
-            yield return new Film { Name = "The 400 Blows", Year = 1959, Director = new[] { "François Truffaut" }, Actor = new[] { "Jean-Pierre Léaud", "Albert Rémy" } };
+            yield return new Film { Name = "The 400 Blows", Year = 1959, Director = new[] { "FranÃ§ois Truffaut" }, Actor = new[] { "Jean-Pierre LÃ©aud", "Albert RÃ©my" } };
             yield return new Film { Name = "Stand by Me", Year = 1986, Director = new[] { "Rob Reiner" }, Actor = new[] { "Wil Wheaton", "River Phoenix" } };
             yield return new Film { Name = "Persona", Year = 1966, Director = new[] { "Ingmar Bergman" }, Actor = new[] { "Bibi Andersson", "Liv Ullmann" } };
             yield return new Film { Name = "In the Name of the Father", Year = 1993, Director = new[] { "Jim Sheridan" }, Actor = new[] { "Daniel Day-Lewis", "Pete Postlethwaite" } };
@@ -196,20 +194,20 @@ namespace IoC101Demo
             yield return new Film { Name = "Shutter Island", Year = 2010, Director = new[] { "Martin Scorsese" }, Actor = new[] { "Leonardo DiCaprio", "Emily Mortimer" } };
             yield return new Film { Name = "The Grand Budapest Hotel", Year = 2014, Director = new[] { "Wes Anderson" }, Actor = new[] { "Ralph Fiennes", "F. Murray Abraham" } };
             yield return new Film { Name = "The Princess Bride", Year = 1987, Director = new[] { "Rob Reiner" }, Actor = new[] { "Cary Elwes", "Mandy Patinkin" } };
-            yield return new Film { Name = "Amores Perros", Year = 2000, Director = new[] { "Alejandro González Iñárritu" }, Actor = new[] { "Emilio Echevarría", "Gael García Bernal" } };
+            yield return new Film { Name = "Amores Perros", Year = 2000, Director = new[] { "Alejandro GonzÃ¡lez IÃ±Ã¡rritu" }, Actor = new[] { "Emilio EchevarrÃ­a", "Gael GarcÃ­a Bernal" } };
             yield return new Film { Name = "Touch of Evil", Year = 1958, Director = new[] { "Orson Welles" }, Actor = new[] { "Charlton Heston", "Orson Welles" } };
             yield return new Film { Name = "Million Dollar Baby", Year = 2004, Director = new[] { "Clint Eastwood" }, Actor = new[] { "Hilary Swank", "Clint Eastwood" } };
             yield return new Film { Name = "Ben-Hur", Year = 1959, Director = new[] { "William Wyler" }, Actor = new[] { "Charlton Heston", "Jack Hawkins" } };
             yield return new Film { Name = "Annie Hall", Year = 1977, Director = new[] { "Woody Allen" }, Actor = new[] { "Woody Allen", "Diane Keaton" } };
-            yield return new Film { Name = "Wild Tales", Year = 2014, Director = new[] { "Damián Szifrón" }, Actor = new[] { "Darío Grandinetti", "María Marull" } };
+            yield return new Film { Name = "Wild Tales", Year = 2014, Director = new[] { "DamiÃ¡n SzifrÃ³n" }, Actor = new[] { "DarÃ­o Grandinetti", "MarÃ­a Marull" } };
             yield return new Film { Name = "The Grapes of Wrath", Year = 1940, Director = new[] { "John Ford" }, Actor = new[] { "Henry Fonda", "Jane Darwell" } };
-            yield return new Film { Name = "Hachi: A Dog's Tale", Year = 2009, Director = new[] { "Lasse Hallström" }, Actor = new[] { "Richard Gere", "Joan Allen" } };
-            yield return new Film { Name = "Nausicaä of the Valley of the Wind", Year = 1984, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "Sumi Shimamoto", "Mahito Tsujimura" } };
+            yield return new Film { Name = "Hachi: A Dog's Tale", Year = 2009, Director = new[] { "Lasse HallstrÃ¶m" }, Actor = new[] { "Richard Gere", "Joan Allen" } };
+            yield return new Film { Name = "NausicaÃ¤ of the Valley of the Wind", Year = 1984, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "Sumi Shimamoto", "Mahito Tsujimura" } };
             yield return new Film { Name = "Stalker", Year = 1979, Director = new[] { "Andrei Tarkovsky" }, Actor = new[] { "Alisa Freyndlikh", "Aleksandr Kaydanovskiy" } };
-            yield return new Film { Name = "Les Diaboliques", Year = 1955, Director = new[] { "Henri-Georges Clouzot" }, Actor = new[] { "Simone Signoret", "Véra Clouzot" } };
+            yield return new Film { Name = "Les Diaboliques", Year = 1955, Director = new[] { "Henri-Georges Clouzot" }, Actor = new[] { "Simone Signoret", "VÃ©ra Clouzot" } };
             yield return new Film { Name = "Jurassic Park", Year = 1993, Director = new[] { "Steven Spielberg" }, Actor = new[] { "Sam Neill", "Laura Dern" } };
             yield return new Film { Name = "Gandhi", Year = 1982, Director = new[] { "Richard Attenborough" }, Actor = new[] { "Ben Kingsley", "John Gielgud" } };
-            yield return new Film { Name = "8½", Year = 1963, Director = new[] { "Federico Fellini" }, Actor = new[] { "Marcello Mastroianni", "Anouk Aimée" } };
+            yield return new Film { Name = "8Â½", Year = 1963, Director = new[] { "Federico Fellini" }, Actor = new[] { "Marcello Mastroianni", "Anouk AimÃ©e" } };
             yield return new Film { Name = "The Bourne Ultimatum", Year = 2007, Director = new[] { "Paul Greengrass" }, Actor = new[] { "Matt Damon", "Edgar Ramirez" } };
             yield return new Film { Name = "Donnie Darko", Year = 2001, Director = new[] { "Richard Kelly" }, Actor = new[] { "Jake Gyllenhaal", "Jena Malone" } };
             yield return new Film { Name = "Before Sunrise", Year = 1995, Director = new[] { "Richard Linklater" }, Actor = new[] { "Ethan Hawke", "Julie Delpy" } };
@@ -230,18 +228,18 @@ namespace IoC101Demo
             yield return new Film { Name = "Jaws", Year = 1975, Director = new[] { "Steven Spielberg" }, Actor = new[] { "Roy Scheider", "Robert Shaw" } };
             yield return new Film { Name = "The Battle of Algiers", Year = 1966, Director = new[] { "Gillo Pontecorvo" }, Actor = new[] { "Brahim Hadjadj", "Jean Martin" } };
             yield return new Film { Name = "Barry Lyndon", Year = 1975, Director = new[] { "Stanley Kubrick" }, Actor = new[] { "Ryan O'Neal", "Marisa Berenson" } };
-            yield return new Film { Name = "La Haine", Year = 1995, Director = new[] { "Mathieu Kassovitz" }, Actor = new[] { "Vincent Cassel", "Hubert Koundé" } };
+            yield return new Film { Name = "La Haine", Year = 1995, Director = new[] { "Mathieu Kassovitz" }, Actor = new[] { "Vincent Cassel", "Hubert KoundÃ©" } };
             yield return new Film { Name = "Fanny and Alexander", Year = 1982, Director = new[] { "Ingmar Bergman" }, Actor = new[] { "Bertil Guve", "Pernilla Allwin" } };
             yield return new Film { Name = "Dog Day Afternoon", Year = 1975, Director = new[] { "Sidney Lumet" }, Actor = new[] { "Al Pacino", "John Cazale" } };
             yield return new Film { Name = "Avengers Assemble", Year = 2012, Director = new[] { "Joss Whedon" }, Actor = new[] { "Robert Downey Jr.", "Chris Evans" } };
             yield return new Film { Name = "Ip Man", Year = 2008, Director = new[] { "Wilson Yip" }, Actor = new[] { "Donnie Yen", "Simon Yam" } };
             yield return new Film { Name = "Prisoners", Year = 2013, Director = new[] { "Denis Villeneuve" }, Actor = new[] { "Hugh Jackman", "Jake Gyllenhaal" } };
             yield return new Film { Name = "The Imitation Game", Year = 2014, Director = new[] { "Morten Tyldum" }, Actor = new[] { "Benedict Cumberbatch", "Keira Knightley" } };
-            yield return new Film { Name = "Throne of Blood", Year = 1957, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "Toshirô Mifune", "Minoru Chiaki" } };
+            yield return new Film { Name = "Throne of Blood", Year = 1957, Director = new[] { "Akira Kurosawa" }, Actor = new[] { "ToshirÃ´ Mifune", "Minoru Chiaki" } };
             yield return new Film { Name = "The King's Speech", Year = 2010, Director = new[] { "Tom Hooper" }, Actor = new[] { "Colin Firth", "Geoffrey Rush" } };
             yield return new Film { Name = "Pirates of the Caribbean: The Curse of the Black Pearl", Year = 2003, Director = new[] { "Gore Verbinski" }, Actor = new[] { "Johnny Depp", "Geoffrey Rush" } };
             yield return new Film { Name = "Guardians of the Galaxy", Year = 2014, Director = new[] { "James Gunn" }, Actor = new[] { "Chris Pratt", "Vin Diesel" } };
-            yield return new Film { Name = "A Fistful of Dollars", Year = 1964, Director = new[] { "Sergio Leone" }, Actor = new[] { "Clint Eastwood", "Gian Maria Volontè" } };
+            yield return new Film { Name = "A Fistful of Dollars", Year = 1964, Director = new[] { "Sergio Leone" }, Actor = new[] { "Clint Eastwood", "Gian Maria VolontÃ¨" } };
             yield return new Film { Name = "High Noon", Year = 1952, Director = new[] { "Fred Zinnemann" }, Actor = new[] { "Gary Cooper", "Grace Kelly" } };
             yield return new Film { Name = "The Help", Year = 2011, Director = new[] { "Tate Taylor" }, Actor = new[] { "Emma Stone", "Viola Davis" } };
             yield return new Film { Name = "Laputa: Castle in the Sky", Year = 1986, Director = new[] { "Hayao Miyazaki" }, Actor = new[] { "Anna Paquin", "James Van Der Beek" } };
@@ -257,7 +255,7 @@ namespace IoC101Demo
             yield return new Film { Name = "Anatomy of a Murder", Year = 1959, Director = new[] { "Otto Preminger" }, Actor = new[] { "James Stewart", "Lee Remick" } };
             yield return new Film { Name = "In the Mood for Love", Year = 2000, Director = new[] { "Kar-wai Wong" }, Actor = new[] { "Tony Chiu Wai Leung", "Maggie Cheung" } };
             yield return new Film { Name = "Before Sunset", Year = 2004, Director = new[] { "Richard Linklater" }, Actor = new[] { "Ethan Hawke", "Julie Delpy" } };
-            yield return new Film { Name = "Akira", Year = 1988, Director = new[] { "Katsuhiro Ôtomo" }, Actor = new[] { "Nozomu Sasaki", "Mami Koyama" } };
+            yield return new Film { Name = "Akira", Year = 1988, Director = new[] { "Katsuhiro Ã”tomo" }, Actor = new[] { "Nozomu Sasaki", "Mami Koyama" } };
         }
     }
 }
