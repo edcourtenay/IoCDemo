@@ -7,17 +7,24 @@ using IoC101Demo.Sorting;
 
 namespace IoC101Demo
 {
-    class SimpleApp
+    public class SimpleApp
     {
+        private readonly IFilmRepository _filmRepository;
+        private readonly IFilmFilter _filmFilter;
+        private readonly IFilmSortStrategy _filmSortStrategy;
+
+        public SimpleApp(IFilmRepository filmRepository, IFilmFilter filmFilter, IFilmSortStrategy filmSortStrategy)
+        {
+            _filmRepository = filmRepository;
+            _filmFilter = filmFilter;
+            _filmSortStrategy = filmSortStrategy;
+        }
+
         public void Run()
         {
-            var repository = new FilmRepository();
-            var filter = new Since2000Filter();
-            var filmSortStrategy = new YearSort();
-
-            var filteredFilms = repository.Films()
-                .Where(filter.FilterFunction)
-                .OrderBy(film => film, filmSortStrategy)
+            var filteredFilms = _filmRepository.Films()
+                .Where(_filmFilter.FilterFunction)
+                .OrderBy(film => film, _filmSortStrategy)
                 .ToArray();
 
             foreach (var filteredFilm in filteredFilms)
