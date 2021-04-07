@@ -1,16 +1,13 @@
-﻿using System;
-using System.Linq;
-using IoC101Demo;
+﻿using IoC101Demo;
 using IoC101Demo.Filters;
 using Moq;
-using NUnit.Framework;
+using Xunit;
 
 namespace Ioc101Demo.Tests
 {
-    [TestFixture]
     public class SimpleAppTest
     {
-        [Test]
+        [Fact]
         public static void RunShouldExecuteWithoutError()
         {
             var sut = new SimpleApp(new FakeFilmRepository(), Mock.Of<IFilmFilter>(), Mock.Of<IFilmSortStrategy>());

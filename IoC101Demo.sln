@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC101Demo", "IoC101Demo\Io
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ioc101Demo.Tests", "Ioc101Demo.Tests\Ioc101Demo.Tests.csproj", "{CD328894-EA73-4F29-A12A-02D2AB981DC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbFilmRepository", "ImdbFilmRepository\ImdbFilmRepository.csproj", "{B6ACAF60-6D6F-44C0-AB8A-0BC1CD2745D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CD328894-EA73-4F29-A12A-02D2AB981DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD328894-EA73-4F29-A12A-02D2AB981DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD328894-EA73-4F29-A12A-02D2AB981DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6ACAF60-6D6F-44C0-AB8A-0BC1CD2745D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6ACAF60-6D6F-44C0-AB8A-0BC1CD2745D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6ACAF60-6D6F-44C0-AB8A-0BC1CD2745D2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6ACAF60-6D6F-44C0-AB8A-0BC1CD2745D2}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
