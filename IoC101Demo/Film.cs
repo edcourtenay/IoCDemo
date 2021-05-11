@@ -4,10 +4,10 @@ namespace IoC101Demo
 {
     public class Film
     {
-        public string Name { get; set; }
-        public int Year { get; set; }
-        public string[] Director { get; set; }
-        public string[] Actor { get; set; }
+        public string Name { get; init; }
+        public int Year { get; init; }
+        public string[] Director { get; init; }
+        public string[] Actor { get; init; }
 
         public override string ToString()
         {
