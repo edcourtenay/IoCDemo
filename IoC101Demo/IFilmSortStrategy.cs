@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace IoC101Demo
+namespace IoC101Demo;
+
+public interface IFilmSortStrategy : IComparer<Film>
 {
-    public interface IFilmSortStrategy : IComparer<Film>
-    {
-    }
 }

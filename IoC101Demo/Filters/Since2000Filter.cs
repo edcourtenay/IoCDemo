@@ -1,10 +1,9 @@
 using System;
 
-namespace IoC101Demo.Filters
+namespace IoC101Demo.Filters;
+
+internal class Since2000Filter : IFilmFilter
 {
-    internal class Since2000Filter : IFilmFilter
-    {
-        public Func<Film, bool> FilterFunction
-            => film => film.Year >= 2000;
-    }
+    public Func<Film, bool> FilterFunction
+        => film => film.Year >= 2000;
 }

@@ -1,17 +1,17 @@
 using System;
+using System.Collections.Generic;
 
-namespace IoC101Demo
+namespace IoC101Demo;
+
+public record Film
 {
-    public class Film
-    {
-        public string Name { get; init; }
-        public int Year { get; init; }
-        public string[] Director { get; init; }
-        public string[] Actor { get; init; }
+    public string Name { get; init; }
+    public int Year { get; init; }
+    public string[] Director { get; init; }
+    public string[] Actor { get; init; }
 
-        public override string ToString()
-        {
-            return string.Format("{0} [{1}]: {2}", Name, String.Join(", ", Director), Year);
-        }
+    public override string ToString()
+    {
+        return $"{Name} [{string.Join(", ", Director)}]: {Year}";
     }
 }

@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 
-namespace IoC101Demo
+namespace IoC101Demo;
+
+public interface IFilmRepository
 {
-    public interface IFilmRepository
-    {
-        IEnumerable<Film> Films();
-    }
+    IEnumerable<Film> Films();
 }
